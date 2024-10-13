@@ -3,6 +3,10 @@
 " Set compatibility to Vim only
 set nocompatible
 
+" Set split to the right and below
+set splitright
+set splitbelow
+
 " Enable syntax and plugins (for netrw)
 syntax enable
 filetype plugin on
@@ -52,3 +56,37 @@ command! MakeTags !ctags -R .
 
 " NOW WE CAN: 
 " - Use ^n and ^p to go back and forth in the suggestion list
+
+" FILE BROWSING:
+" Tweaks for browsing
+let g:netrw_banner=0		" disable annoying banner
+let g:netrw_browse_split=4	" open in prior window
+let g:netrw_altv=1		" open splits to the right
+let g:netrw_liststyle=3		" tree view
+"let g:netrw_list_hide=netrw_gitignore#Hide()
+" let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" NOW WE CAN:
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
+
+" MAPPINGS:
+let mapleader = "\<Space>"
+" Reload .vimrc
+nnoremap <leader>r :source $MYVIMRC<CR>
+" Save
+nnoremap <C-s> :w<CR>
+
+" Create new tab
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>] :tabn<CR>
+nnoremap <leader>[ :tabp<cr>
+
+" vsplit
+nnoremap <leader>w :vsplit<cr>
+nnoremap <leader>W :split<cr>
+
+" move selected line up
+vnoremap <C-j> dpV
+vnoremap <C-k> dkPV
