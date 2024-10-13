@@ -15,6 +15,9 @@ filetype plugin on
 set relativenumber
 colorscheme habamax
 
+" Enable status bar
+set laststatus=2
+
 " FINDING FILES:
 
 " Search down into subfolders
