@@ -2,6 +2,17 @@
 
 " Set compatibility to Vim only
 set nocompatible
+" Set encoding
+set encoding=utf-8
+
+" Set tab size to 4 spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" Convert tabs to spaces
+set expandtab
+set autoindent
+set fileformat=unix
 
 " Set split to the right and below
 set splitright
