@@ -1,5 +1,8 @@
 " BASIC SETUP:
 
+" Allow backspace
+set backspace=indent,eol,start
+
 " Set compatibility to Vim only
 set nocompatible
 " Set encoding
