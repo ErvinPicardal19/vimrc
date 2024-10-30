@@ -51,7 +51,7 @@ set wildmenu
 " TAG JUMPING:
 
 " Create the 'tags' file (may need to install ctags first)
-command! MakeTags !ctags -R .
+command! MakeTags !ctags -R  -f tags . /usr/include
 
 " NOW WE CAN:
 " - Use ^] to jump to tag under cursor
